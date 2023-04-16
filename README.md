@@ -45,3 +45,12 @@ A very simple vim plugin for surrounding selected text in paired characters `()`
         
         [ foo bar
         Hello W ]orld!
+        
+## Installation
+
+Install using your favorite package manager, or use Vim's built-in package
+support:
+
+        mkdir -p ~/.vim/pack/gmartineza/start
+        cd ~/.vim/pack/gmartineza/start
+        git clone https://github.com/gmartineza/vim-visual-surround.git

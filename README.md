@@ -1,10 +1,47 @@
-# vim-autopair
-A very simple vim plugin for autocompleting the paired characters (), [], {}, '', and ""
+# vim-visual-surround
+A very simple vim plugin for surrounding selected text in paired characters `()`, `[]`, `{}`, `''`, and `""`.
 
-Press tab after any autocomplete pair to cancel and only write the single character. 
 
-Pressing ; after any pair will skip to the end of the line and place a semicolon. Pressing 
-{ after ( will skip to the end of the parentheses and add a bracket pair.
+## User guide
 
-Pressing any pair key in visual mode will surround the selected text with that key.
-(For double quotes, press space as a leader key, since " is already used to specify registers)
+
+* Surrond selection with single quotes (`(`, `[` and `{` work the same way):
+
+        |foo| bar ( press ' )  
+
+        'foo' bar
+
+* Surround selection with double quotes (a leader prefix is needed to avoid conflict with `"{register}`)
+
+        |foo| bar ( press <leader>" )
+
+        "foo" bar
+
+* Surrond selection with a space and parentheses (`]` and `}` work the same way):
+
+        |foo| bar ( press ) )
+
+        ( foo ) bar
+
+
+* All features also work on Visual Line mode:
+
+        |foo bar | ( press [ )
+        
+        [foo bar]
+        
+  * Also on multiple lines:
+        
+        |foo bar |
+        |Hello World! | (press } )
+        
+        { foo bar
+        Hello World! }
+        
+* All features "work" on Visual Block
+
+        |foo bar|
+        |Hello W|orld! (press ] )
+        
+        [ foo bar
+        Hello W ]orld!
